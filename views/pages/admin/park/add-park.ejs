@@ -1,0 +1,23 @@
+<div class="adminPanel">
+	<%- partial('../../../partials/admin/header.ejs') %>
+
+    <div class="content">
+        <h1><%= title %></h1>
+        <div class="row" style="margin-top: 30px;">
+        	<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        		<form action="/admin/create-park" method="POST">
+                    <input type="text" name="name" placeholder="Име на паркот">
+                    <input type="text" name="location" placeholder="Локација на паркот (адреса)">
+
+                    <select name="smart_solutions" multiple>
+                        <option value="led">LED Осветлување</option>
+                        <option value="wifi">Wi-fi мрежа</option>
+                        <option value="otpad">Паметни корпи за отпад</option>
+                    </select>
+
+                    <input type="submit" name="Додади" >
+                </form>
+        	</div>
+        </div>
+    </div>
+</div>

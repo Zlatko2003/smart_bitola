@@ -1,0 +1,65 @@
+<%- partial('../partials/header.ejs') %>
+<main>
+	<div class="sideServices">
+		<div class="container">
+			<div class="sideServicesBoxes">
+				<div class="sideService">
+					<i class="fa-solid fa-square-parking"></i>
+					<div class="sideServiceText">
+						<small>Број на паркинг</small>
+						<b>{{number_of_parkings}}</b>
+					</div>
+				</div>
+				<div class="sideService">
+					<i class="fa-solid fa-tree"></i>
+					<div class="sideServiceText">
+						<small>Број на паркови</small>
+						<b>{{number_of_parks}}</b>
+					</div>
+				</div>
+				<div class="sideService">
+					<i class="fa-solid fa-map"></i>
+					<div class="sideServiceText">
+						<a href="https://www.google.com/maps/d/u/0/viewer?mid=1yVLc3FT5LHleGrbsECidoNfVl08&hl=en&ll=41.035422584529165%2C21.33654910788217&z=14" target="_blank"><small>Мапа на Битола</small></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="mainServices">
+		<div class="mainService">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 imgMainService">
+						<img src="images/smart_parking.jpg" alt="Илустрација на паметен паркинг">
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 textMainServiceFirst">
+						<small>Како да стигнам до паркинг место ?</small>
+						<h3>Паметен паркинг</h3>
+						<hr>
+						<p>Паметното паркирање е стратегија за паркирање што ги комбинира технологијата и човечките иновации во обид да се искористат што е можно помалку ресурси - како гориво, време и простор - за да се постигне побрзо, полесно и погусто паркирање на возилата во поголемиот дел од времето кога тие остануваат неактивен.</p>
+						<button onclick="location.href='/smart-parking'">ПОГЛЕДНИ</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mainService darkBg">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 textMainServiceSecond">
+						<small>Каде да го искористам слободно време ?</small>
+						<h3>Паметен парк</h3>
+						<hr>
+						<p>Паметен парк интегрира напредни технологии и функции во јавните паркови и рекреативните области за да го подобри искуството на посетителите и оперативната ефикасност. Ова вклучува функции како што се паметно осветлување, поврзување со Wi-Fi и следење на животната средина за да се понуди пријатно и информативно искуство во паркот, а истовремено да им се овозможи на управителите на паркот далечински да ги следат објектите и ресурсите на паркот.</p>
+						<button onclick="location.href='/smart-parks'">ПОГЛЕДНИ</button>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6 imgMainService">
+						<img src="images/smart_parks.jpg" alt="Илустрација на паметен парк">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<%- partial('../partials/footer.ejs') %>

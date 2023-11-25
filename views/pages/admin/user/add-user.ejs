@@ -1,0 +1,22 @@
+<div class="adminPanel">
+	<%- partial('../../../partials/admin/header.ejs') %>
+
+    <div class="content">
+        <h1><%= title %></h1>
+        <div class="row" style="margin-top: 30px;">
+        	<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        		<form action="/admin/create-user" method="POST">
+                    <input type="string" name="username" placeholder="Корисничко име">
+                    <input type="string" name="email" placeholder="Email адреса">
+                    <input type="string" name="password" placeholder="Лозинка" max="10">
+                    <select name="admin">
+                        <option value="false">Корисник</option>
+                        <option value="true">Админ</option>
+                    </select>
+
+                    <input type="submit" name="Додади">
+                </form>
+        	</div>
+        </div>
+    </div>
+</div>

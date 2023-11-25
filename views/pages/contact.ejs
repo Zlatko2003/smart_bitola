@@ -1,0 +1,46 @@
+<%- partial('../partials/header.ejs') %>
+<main>
+	<div class="sideServices">
+		<div class="container">
+			<div class="sideServicesBoxes">
+				<div class="sideService">
+					<i class="fa-solid fa-square-parking"></i>
+					<div class="sideServiceText">
+						<small>Број на паркинг</small>
+						<b>{{number_of_parkings}}</b>
+					</div>
+				</div>
+				<div class="sideService">
+					<i class="fa-solid fa-tree"></i>
+					<div class="sideServiceText">
+						<small>Број на паркови</small>
+						<b>{{number_of_parks}}</b>
+					</div>
+				</div>
+				<div class="sideService">
+					<i class="fa-solid fa-map"></i>
+					<div class="sideServiceText">
+						<a href="https://www.google.com/maps/d/u/0/viewer?mid=1yVLc3FT5LHleGrbsECidoNfVl08&hl=en&ll=41.035422584529165%2C21.33654910788217&z=14" target="_blank"><small>Мапа на Битола</small></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="contactSection">
+		<div class="container">
+			<div class="header">
+				<h3>За нас</h3>
+				<hr>
+				<p>Доколку имате било какви прашања, предлози или барате дополнителни информации за паметната средина во Битола, Ве молиме контактирајте не. Нашиот тим е на располагање да ви помогне и одговори на вашите барања што е можно најскоро. <br><br>Благодариме ви што сте дел од нашата паметна заедница и се радуваме на соработка со вас!
+					<ul>
+						<li>
+							<i class="fa-solid fa-envelope" style="margin-right: 10px; vertical-align: middle;"></i>
+			                <a href="mailto:contact@smartbitola.mk">contact@smartbitola.mk</a>
+						</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+</main>
+<%- partial('../partials/footer.ejs') %>

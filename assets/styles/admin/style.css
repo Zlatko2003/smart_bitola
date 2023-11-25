@@ -1,0 +1,218 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+[v-cloak]{
+    display: none;
+}
+
+.adminPanel {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.adminBox{
+    border: 1px solid #f1f1f1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adminBox .boxInfo{
+    text-align: right;
+}
+
+.adminBox .boxInfo h2{
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.adminBox .boxInfo p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.adminBox i {
+    font-size: 40px;
+}
+
+/* users */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+    background-color: #fafafa;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+/*    margin-top: 150px;*/
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .25em 0 .75em;
+}
+
+table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table td img {
+    text-align: center;
+}
+
+table button{
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+table button:hover{
+    opacity: 0.7;
+}
+
+.addButton {
+    width: 35%;
+    margin-bottom: 10px;
+    background: #333333;
+    border: 0;
+    color: white;
+    padding: 10px;
+}
+
+/* add/edit user */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select {
+    margin-bottom: 10px;
+    padding: 5px 15px;
+}
+
+form input[type='submit']{
+    width: 50%;
+    background-color: #333333;
+    color: white;
+    border: 0;
+    padding: 10px 5px;
+}
+
+@media screen and (max-width: 600px) {
+
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+/* ===== */
+
+@media (max-width: 768px) {
+    .adminPanel {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,46 @@
+<header>
+	<div class="container">
+		<div class="navbar">
+			<img class="logo" src="images/saat_kula.png" alt="SmartBitola Logo">
+			<div class="buttons">
+			    <a href="/">Почетна</a>
+			    <div class="dropdown">
+			        <button class="dropbtn">Услуги <i class="fa fa-caret-down" aria-hidden="true"></i>
+			        </button>
+			        <div class="dropdown-content">
+			            <a href="/smart-parking">Паркинг</a>
+			            <a href="/smart-parks">Паркови</a>
+			        </div>
+			    </div>
+			    <a href="/about">За нас</a>
+			    <a href="/contact">Контакт</a>
+			</div>
+			<div class="mobileButtons">
+				<a v-on:click="openNav()"><i class="fa-solid fa-bars"></i></a>
+				
+				<div id="mobileNavbar" class="overlay">
+					<a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+					<div class="overlay-content">
+						<a href="/">Почетна</a>
+						<div class="mobileServices">
+							<p>Услуги</p>
+							<a href="/smart-parking">Паркинг</a>
+			            	<a href="/smart-parks">Паркови</a>
+						</div>
+						<a href="/about">За нас</a>
+			    		<a href="/contact">Контакт</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bannerText">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+					<h1>Битола</h1>
+					<h2>Smart Environment</h2>
+					<p>Град на паметни решенија кои се стекнуваат преку иновации и одржливост</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

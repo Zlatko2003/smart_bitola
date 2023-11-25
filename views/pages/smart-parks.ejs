@@ -1,0 +1,92 @@
+<%- partial('../partials/header.ejs') %>
+<main>
+	<div class="sideServices">
+		<div class="container">
+			<div class="sideServicesBoxes">
+				<div class="sideService">
+					<i class="fa-solid fa-square-parking"></i>
+					<div class="sideServiceText">
+						<small>Број на паркинг</small>
+						<b>{{number_of_parkings}}</b>
+					</div>
+				</div>
+				<div class="sideService">
+					<i class="fa-solid fa-tree"></i>
+					<div class="sideServiceText">
+						<small>Број на паркови</small>
+						<b>{{number_of_parks}}</b>
+					</div>
+				</div>
+				<div class="sideService">
+					<i class="fa-solid fa-map"></i>
+					<div class="sideServiceText">
+						<a href="https://www.google.com/maps/d/u/0/viewer?mid=1yVLc3FT5LHleGrbsECidoNfVl08&hl=en&ll=41.035422584529165%2C21.33654910788217&z=14" target="_blank"><small>Мапа на Битола</small></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="container">
+		<div class="smartParkHeader">
+			<h3>Паметен парк</h3>
+			<hr>
+			<p>Паметен парк интегрира напредни технологии и функции во јавните паркови и рекреативните области за да го подобри искуството на посетителите и оперативната ефикасност. Ова вклучува функции како што се паметно осветлување, поврзување со Wi-Fi и следење на животната средина за да се понуди пријатно и информативно искуство во паркот, а истовремено да им се овозможи на управителите на паркот далечински да ги следат објектите и ресурсите на паркот.
+			<br><br>
+			<b>Сите паметни паркови можете да ги погледнете тука:</b></p>
+		</div>
+		<div class="smartParks">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-6" v-for="park in parks">
+						<div class="smartParkBox">
+							<h4>{{ park.name }}</h4>
+							<hr>
+							<div class="row">
+								<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="smartParkBoxText">
+										<div class="smartParkBoxTextFirst">
+											<i class="fa-solid fa-location-dot"></i>
+											<h5>Локација</h5>
+										</div>
+										<p><b>{{ park.location }}</b></p>
+									</div>
+								</div>
+							</div>
+							<h5>Паметни решенија и иновации:</h5>
+							<div class="row">
+								<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="smartParkBoxText">
+										<div class="smartParkBoxTextFirst">
+											<i class="fa-solid fa-lightbulb" :style="checkService(park, 'led')"></i>
+											<h5>LED Осветлување</h5>
+										</div>
+										<p><b>{{checkServiceText(park, 'led')}}</b></p>
+									</div>
+								</div>
+								<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="smartParkBoxText">
+										<div class="smartParkBoxTextFirst">
+											<i class="fa-solid fa-wifi" :style="checkService(park, 'wifi')"></i>
+											<h5>Wi-Fi мрежа</h5>
+										</div>
+										<p><b>{{checkServiceText(park, 'wifi')}}</b></p>
+									</div>
+								</div>
+								<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="smartParkBoxText">
+										<div class="smartParkBoxTextFirst">
+											<i class="fa-solid fa-trash" :style="checkService(park, 'otpad')"></i>
+											<h5>Паметни корпи за отпад</h5>
+										</div>
+										<p><b>{{checkServiceText(park, 'otpad')}}</b></p>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<%- partial('../partials/footer.ejs') %>

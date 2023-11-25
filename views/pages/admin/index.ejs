@@ -1,0 +1,36 @@
+<div class="adminPanel">
+	<%- partial('../../partials/admin/header.ejs') %>
+
+    <div class="content">
+        <h1><%= title %></h1>
+        <div class="row" style="margin-top: 30px;">
+        	<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        		<div class="adminBox">
+        			<i class="fa-solid fa-users"></i>
+        			<div class="boxInfo">
+        				<h2>Корисници</h2>
+        				<p><b><%= users.length %></b></p>
+        			</div>
+        		</div>	
+        	</div>
+        	<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        		<div class="adminBox">
+        			<i class="fa-solid fa-parking"></i>
+        			<div class="boxInfo">
+        				<h2>Паметни паркинзи</h2>
+        				<p><b><%= parkings.length %></b></p>
+        			</div>
+        		</div>	
+        	</div>
+        	<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        		<div class="adminBox">
+        			<i class="fa-solid fa-tree"></i>
+        			<div class="boxInfo">
+        				<h2>Паметни паркови</h2>
+        				<p><b><%= parks.length %></b></p>
+        			</div>
+        		</div>	
+        	</div>
+        </div>
+    </div>
+</div>

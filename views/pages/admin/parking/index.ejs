@@ -1,0 +1,54 @@
+<div class="adminPanel">
+	<%- partial('../../../partials/admin/header.ejs') %>
+
+    <div class="content">
+        <h1><%= title %></h1>
+        <div class="row" style="margin-top: 30px;">
+        	<div class="col-12 col-sm-12 col-md-12 col-lg-12" v-if="parkingsTable === true">
+                <button class="addButton" onclick="location.href = '/admin/add-parking'">Нов паркинг</button>
+        		<table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Име</th>
+                            <th scope="col">Локација</th>
+                            <th scope="col">Резервации</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="parking in parkings">
+                            <td scope="row" data-label="Име">{{ parking.name }}</td>
+                            <td data-label="Локација">{{ parking.location }}</td>
+                            <td data-label="Резервации"><button v-on:click="showReservation(parking)">Погледни резервации</button></td>
+                            <td data-label="#">
+                                <button v-on:click="openEditFormParking(parking.id)" style="background: #0066ff85;"><i class="fa-solid fa-pen"></i></button>
+                                <button v-on:click="deleteParking(parking.id)" style="background: #ff000085;"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>	
+        	</div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12" v-if="parkingReservation === true">
+                <button class="addButton" v-on:click="parkingsTable = true;  parkingReservation = false; parking_reservation = [];">Назад</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Паркинг место</th>
+                            <th scope="col">Број на резервација</th>
+                            <th scope="col">Регистарски таблици</th>
+                            <th scope="col">Резервирано до</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="reservation in parking_reservation">
+                            <td scope="row" data-label="Паркинг место">{{ reservation.parking_space }}</td>
+                            <td data-label="Број на резервација">{{ reservation.orderNumber }}</td>
+                            <td data-label="Регистарски таблици">{{ reservation.holder }}</td>
+                            <td data-label="Резервирано до">{{ reservation.finishAt }}</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </div>
+    </div>
+</div>

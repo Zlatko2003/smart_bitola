@@ -1,0 +1,33 @@
+<div class="adminPanel">
+	<%- partial('../../../partials/admin/header.ejs') %>
+
+    <div class="content">
+        <h1><%= title %></h1>
+        <div class="row" style="margin-top: 30px;">
+        	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <button class="addButton" onclick="location.href = '/admin/add-user'">Нова сметка</button>
+        		<table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Корисничко име</th>
+                            <th scope="col">Email адреса</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach(function(user){ %>
+                        <tr>
+                            <td scope="row" data-label="Корисничко име"><%= user.username %></td>
+                            <td data-label="Email адреса"><%= user.email %></td>
+                            <td data-label="#">
+                                <button onclick="location.href = '/admin/user/<%= user.id %>'" style="background: #0066ff85;"><i class="fa-solid fa-pen"></i></button>
+                                <button onclick="location.href = '/admin/delete-user/<%= user.id %>'" style="background: #ff000085;"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>	
+        	</div>
+        </div>
+    </div>
+</div>

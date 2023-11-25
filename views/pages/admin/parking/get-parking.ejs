@@ -1,0 +1,30 @@
+<div class="adminPanel">
+    <%- partial('../../../partials/admin/header.ejs') %>
+
+    <div class="content">
+        <h1><%= title %></h1>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <form action="/admin/update-parking/<%= parking.id %>" method="POST">
+                    <input type="text" name="name" placeholder="Име на паркингот" value="<%= parking.name %>">
+                    <input type="text" name="location" placeholder="Локација на паркингот (адреса)" value="<%= parking.location %>"> 
+                    <div class="row">
+                        <p style="margin: 10px 0 0 0; font-weight: 600;">Работно време</p><br>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6" >
+                            <label for='working_time_start'>Од</label>
+                            <input type="time" name="working_time_start" value="<%= parking.working_time_start %>" style="width: 100%">  
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                            <label for='working_time_end'>До</label>
+                            <input type="time" name="working_time_end" value="<%= parking.working_time_end %>" style="width: 100%">  
+                        </div>
+                    </div>
+                    <input type="number" name="price" placeholder="Цена/час (број)" value="<%= parking.price %>" min="1">
+                    <input type="number" name="parking_spaces" placeholder="Достапни места (број)" value="<%= parking.parking_spaces.length %>" min="1">
+
+                    <input type="submit" name="Додади" >
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
