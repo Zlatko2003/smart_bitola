@@ -21,10 +21,6 @@ Secured first place at the FICT Hackathon on May 13, 2023, underscoring a commit
 - **Database:** MongoDB
 - **Frontend:** Vue3
 
-## Getting Started
-
-To get started with Smart Bitola, follow the instructions in the respective directories (`smart-parking-app/` and `smart-city-parks/`). Detailed documentation can be found in the `docs/` directory.
-
 ## Contact
 
 Feel free to reach out to me at [zlatko.markovski17@gmail.com] for any inquiries or collaboration opportunities.
